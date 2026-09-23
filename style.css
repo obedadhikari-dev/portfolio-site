@@ -24,7 +24,9 @@
   --accent-font: "Source Serif 4", serif;
   /* Sizing */
   --x-padding: 7.5rem;
+  --x-padding-small: 1.563rem;
   --y-padding: 6.25rem;
+  --y-padding-small: 2.2rem;
 }
 
 body {
@@ -54,10 +56,12 @@ body {
     font-weight: 400;
     font-size: 2rem;
     max-height: 36px;
-    &:hover {
-      transform: translateY(-4px) scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent1-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent1-color);
+      }
     }
   }
   .hero-label {
@@ -67,25 +71,31 @@ body {
     font-weight: 800;
     font-family: var(--secondary-font);
     border-bottom: 2px solid var(--accent2-color);
-
-    &:hover {
-      transform: translateY(-4px) scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent2-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent2-color);
+      }
     }
   }
-  .hero-bio {
+  .hero-bio-desktop {
     line-height: 1.2rem;
     margin: 1rem;
     text-align: center;
     font-family: var(--accent-font);
     font-size: 0.875rem;
     max-height: 122px;
-    &:hover {
-      transform: translateY(-4px) scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent3-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent3-color);
+      }
     }
+  }
+  .hero-bio-mobile {
+    display: none;
   }
 }
 
@@ -98,9 +108,11 @@ body {
     display: inline-block;
     text-decoration: none;
     color: var(--primary-color);
-    &:hover {
-      transform: scale(1.1);
-      color: #55a5f5;
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+        color: #55a5f5;
+      }
     }
   }
 }
@@ -113,26 +125,81 @@ body {
   right: var(--x-padding);
   .nav-btn1 {
     border-bottom: 2px solid var(--accent1-color);
-    &:hover {
-      transform: scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent1-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent1-color);
+      }
     }
   }
   .nav-btn2 {
     border-bottom: 2px solid var(--accent2-color);
-    &:hover {
-      transform: scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent2-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent2-color);
+      }
     }
   }
   .nav-btn3 {
     border-bottom: 2px solid var(--accent3-color);
-    &:hover {
-      transform: scale(1.1);
-      color: var(--secondary-color);
-      background-color: var(--accent3-color);
+    @media (hover: hover) {
+      &:hover {
+        transform: scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent3-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    background-size: 32px 32px;
+  }
+
+  .home-icon {
+    top: var(--y-padding-small);
+    left: var(--x-padding-small);
+    font-size: 2rem;
+  }
+
+  .nav-icons {
+    list-style-type: none;
+    top: var(--y-padding-small);
+    right: var(--x-padding-small);
+  }
+
+  .hero-contents {
+    width: 370px;
+
+    .hero-name {
+      font-size: 1.75rem;
+    }
+    .hero-label {
+      font-size: 1rem;
+      font-weight: 800;
+      font-family: var(--secondary-font);
+      border-bottom: 2px solid var(--accent2-color);
+
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--secondary-color);
+        background-color: var(--accent2-color);
+      }
+    }
+    .hero-bio-mobile {
+      display: revert;
+      line-height: 1rem;
+      margin: 1rem;
+      text-align: center;
+      font-family: var(--accent-font);
+      font-size: 0.875rem;
+    }
+    .hero-bio-desktop {
+      display: none;
     }
   }
 }
