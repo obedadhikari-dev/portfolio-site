@@ -9,6 +9,20 @@
 }
 
 :root {
+  /* Colors */
+
+  --primary-color: #000000;
+  --secondary-color: #ffffff;
+  --accent1-color: #f36060;
+  --accent2-color: #55a5f5;
+  --accent3-color: #faa351;
+
+  /* Fonts */
+
+  --primary-font: "Recursive", sans-serif;
+  --secondary-font: "Holtwood One SC", serif;
+  --accent-font: "Source Serif 4", serif;
+  /* Sizing */
   --x-padding: 7.5rem;
   --y-padding: 6.25rem;
 }
@@ -32,25 +46,89 @@ body {
   .hero-name {
     text-transform: uppercase;
     font-style: bold;
-    font-family: "Recursive", sans-serif;
+    font-family: var(--primary-font);
     font-weight: 400;
     font-size: 2rem;
     max-height: 36px;
+    &:hover {
+      transform: translateY(-4px) scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent1-color);
+    }
   }
   .hero-label {
     display: inline-block;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 800;
-    font-family: "Holtwood One SC", serif;
-    max-height: 70px;
+    font-family: var(--secondary-font);
+    border-bottom: 2px solid var(--accent2-color);
+    &:hover {
+      transform: translateY(-4px) scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent2-color);
+    }
   }
   .hero-bio {
     line-height: 1.2rem;
     margin: 1rem;
     text-align: center;
-    font-family: "Source Serif 4", serif;
+    font-family: var(--accent-font);
     font-size: 0.875rem;
     max-height: 122px;
+    &:hover {
+      font-family: var(--secondary-font);
+      transform: translateY(-4px) scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent3-color);
+    }
+  }
+}
+
+.home-icon {
+  position: fixed;
+  top: var(--y-padding);
+  left: var(--x-padding);
+  font-size: 2rem;
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--primary-color);
+    &:hover {
+      transform: scale(1.1);
+      color: #55a5f5;
+    }
+  }
+}
+
+.nav-icons {
+  font-size: 1.25rem;
+  position: fixed;
+  list-style-type: none;
+  top: var(--y-padding);
+  right: var(--x-padding);
+  .nav-btn1 {
+    border-bottom: 2px solid var(--accent1-color);
+    &:hover {
+      transform: scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent1-color);
+    }
+  }
+  .nav-btn2 {
+    border-bottom: 2px solid var(--accent2-color);
+    &:hover {
+      transform: scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent2-color);
+    }
+  }
+  .nav-btn3 {
+    border-bottom: 2px solid var(--accent3-color);
+    &:hover {
+      transform: scale(1.1);
+      color: var(--secondary-color);
+      background-color: var(--accent3-color);
+    }
   }
 }
