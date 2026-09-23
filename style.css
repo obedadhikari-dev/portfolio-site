@@ -26,10 +26,8 @@
   --secondary-font: "Holtwood One SC", serif;
   --accent-font: "Source Serif 4", serif;
   /* Sizing */
-  --x-padding: 7.5rem;
-  --x-padding-small: 1.563rem;
-  --y-padding: 6.25rem;
-  --y-padding-small: 2.2rem;
+  --x-padding: 5.21vw;
+  --y-padding: 5.21vw;
 }
 
 body {
@@ -37,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: var(--y-padding) var(--x-padding);
+  padding-y: var(--y-padding);
   background-image:
     linear-gradient(to right, #f1f5f9 1px, transparent 1px),
     linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
@@ -198,21 +196,35 @@ body {
   }
 }
 
+.resume-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: fixed;
+  right: var(--x-padding);
+  bottom: var(--y-padding);
+  font-size: 2rem;
+  text-decoration: none;
+  color: var(--primary-color);
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px) scale(1.1);
+      color: var(--accent2-color);
+    }
+  }
+}
+
 @media (max-width: 800px) {
   body {
     background-size: 32px 32px;
   }
 
   .home-icon {
-    top: var(--y-padding-small);
-    left: var(--x-padding-small);
     font-size: 2rem;
   }
 
   .nav-icons {
     list-style-type: none;
-    top: var(--y-padding-small);
-    right: var(--x-padding-small);
   }
 
   .hero-contents {
@@ -240,14 +252,6 @@ body {
     }
   }
   .social-links {
-    bottom: var(--y-padding-small);
-    left: var(--x-padding-small);
-    height: 128px;
-    width: 24px;
-    list-style-type: none;
-    font-size: 1.5rem;
-    a {
-      color: var(--primary-color);
-    }
+    display: none;
   }
 }
