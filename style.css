@@ -17,6 +17,9 @@
   --accent2-color: #55a5f5;
   --accent3-color: #faa351;
 
+  --linkedin-blue: #0077b5;
+  --insta-gradient: linear-gradient(to right, #e1306c, #0077b5);
+
   /* Fonts */
 
   --primary-font: "Recursive", sans-serif;
@@ -155,6 +158,46 @@ body {
   }
 }
 
+.social-links {
+  position: fixed;
+  bottom: var(--y-padding);
+  left: var(--x-padding);
+  height: 128px;
+  width: 24px;
+  list-style-type: none;
+  font-size: 2rem;
+  a {
+    color: var(--primary-color);
+  }
+  .social-icon1 {
+    display: inline-block;
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--primary-color);
+      }
+    }
+  }
+  .social-icon2 {
+    display: inline-block;
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--linkedin-blue);
+      }
+    }
+  }
+  .social-icon3 {
+    display: inline-block;
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-4px) scale(1.1);
+        color: var(--accent1-color);
+      }
+    }
+  }
+}
+
 @media (max-width: 800px) {
   body {
     background-size: 32px 32px;
@@ -194,6 +237,17 @@ body {
     }
     .hero-bio-desktop {
       display: none;
+    }
+  }
+  .social-links {
+    bottom: var(--y-padding-small);
+    left: var(--x-padding-small);
+    height: 128px;
+    width: 24px;
+    list-style-type: none;
+    font-size: 1.5rem;
+    a {
+      color: var(--primary-color);
     }
   }
 }
