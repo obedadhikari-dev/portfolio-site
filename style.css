@@ -183,12 +183,6 @@ body {
       font-weight: 800;
       font-family: var(--secondary-font);
       border-bottom: 2px solid var(--accent2-color);
-
-      &:hover {
-        transform: translateY(-4px) scale(1.1);
-        color: var(--secondary-color);
-        background-color: var(--accent2-color);
-      }
     }
     .hero-bio-mobile {
       display: revert;
