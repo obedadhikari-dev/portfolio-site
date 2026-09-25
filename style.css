@@ -35,7 +35,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding-y: var(--y-padding);
   background-image:
     linear-gradient(to right, #f1f5f9 1px, transparent 1px),
     linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
