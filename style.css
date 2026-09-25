@@ -40,6 +40,7 @@ body {
     linear-gradient(to right, #f1f5f9 1px, transparent 1px),
     linear-gradient(to bottom, #f1f5f9 1px, transparent 1px);
   background-size: 32px 32px;
+  background-color: var(--secondary-color);
 }
 
 .hero-contents {
@@ -49,6 +50,7 @@ body {
   align-items: center;
   max-height: 218px;
   max-width: 700px;
+  color: var(--primary-color);
 
   .hero-name {
     text-transform: uppercase;
@@ -124,6 +126,7 @@ body {
   list-style-type: none;
   top: var(--y-padding);
   right: var(--x-padding);
+  color: var(--primary-color);
   .nav-btn1 {
     border-bottom: 2px solid var(--accent1-color);
     @media (hover: hover) {
